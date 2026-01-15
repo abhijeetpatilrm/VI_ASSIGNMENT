@@ -8,6 +8,7 @@ import { hashtagRouter } from './routes/hashtag.routes';
 import { hashtagManagementRouter } from './routes/hashtag-management.routes';
 import { postHashtagRouter } from './routes/post-hashtag.routes';
 import { feedRouter } from './routes/feed.routes';
+import { followersRouter } from './routes/followers.routes';
 import { AppDataSource } from './data-source';
 
 dotenv.config();
@@ -35,6 +36,7 @@ app.use('/api/posts', hashtagRouter);
 app.use('/api/hashtags', hashtagManagementRouter);
 app.use('/api/post-hashtags', postHashtagRouter);
 app.use('/api/feed', feedRouter);
+app.use('/api/users', followersRouter);
 
 const PORT = process.env.PORT || 3000;
 
