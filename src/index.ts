@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import { userRouter } from './routes/user.routes';
 import { postRouter } from './routes/post.routes';
 import { followRouter } from './routes/follow.routes';
+import { likeRouter } from './routes/like.routes';
 import { AppDataSource } from './data-source';
 
 dotenv.config();
@@ -25,6 +26,7 @@ app.get('/', (req, res) => {
 app.use('/api/users', userRouter);
 app.use('/api/posts', postRouter);
 app.use('/api/follows', followRouter);
+app.use('/api/likes', likeRouter);
 
 const PORT = process.env.PORT || 3000;
 
